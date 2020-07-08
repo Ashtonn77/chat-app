@@ -4,29 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat-App</title>
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1>Chat-App</h1>
+    <div class="chat">
+      <div class="chat__sidebar"></div>
 
-    <div id="messages"></div>
+      <div class="chat__main">
+        <div id="messages" class="chat__messages"></div>
 
-    <!--interface-->
-    <form action="" id="message-form">
-      <input
-        type="text"
-        name="message"
-        placeholder="message"
-        id="message-form-input"
-      />
-      <button id="message-form-btn">Send</button>
-    </form>
-    <button id="send-location">Send Location</button>
-    <!--end interface-->
+        <div class="compose">
+          <form action="" id="message-form">
+            <input
+              type="text"
+              name="message"
+              placeholder="message"
+              id="message-form-input"
+            />
+            <button id="message-form-btn">Send</button>
+          </form>
+          <button id="send-location">Send Location</button>
+        </div>
+      </div>
+    </div>
 
     <!--templates-->
     <script id="message-template" type="text/html">
-      <div>
+      <div class="message">
+        <p>
+          <span class="message__name">Some user's name</span>
+          <span class="message__meta">{{createdAt}}</span>
+        </p>
         <p>{{message}}</p>
+      </div>
+    </script>
+
+    <script id="location-message-template" type="text/html">
+      <div class="message">
+        <p>
+          <span class="message__name">Some user's name</span>
+          <span class="message__meta">{{createdAt}}</span>
+        </p>
+        <p><a target="_blank" href="{{url}}">My current location</a></p>
       </div>
     </script>
 
