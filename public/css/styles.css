@@ -1,9 +1,11 @@
 /* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poiret One", cursive;
 }
 
 html {
@@ -49,15 +51,22 @@ button {
   transition: background 0.3s ease;
   border: none;
   border-radius: 10px;
+  transition: all 0.7s ease-in-out;
+  font-weight: bold;
 }
 
 button:hover {
-  background: #6b47b8;
+  background: rgb(0, 122, 170);
 }
 
 button:disabled {
   cursor: default;
-  background: #7c5cbf94;
+  background: rgb(158, 209, 209);
+}
+
+button:active {
+  outline: none;
+  transform: scale(0.8);
 }
 
 /* Join Page Styles */
